@@ -3,15 +3,14 @@ import React, { useState } from 'react';
 
 const Header = () => {
   const [active, setActive] = useState(false);
-
+  const [empty, setEmpty] = useState(false);
+  
   const toggleMenu = () => {
     setActive(!active);
   };
-  
-  
 
   return (
-    <div className={`flex px-28 flex-row justify-between fixed w-full bg-white z-10 shadow-xl py-3 items-center ${active ? 'h-auto' : 'h-20'}`}>
+    <div className={`flex md:px-28 px-2 flex-row justify-between  fixed w-full bg-white z-10 shadow-xl py-3 items-center ${active ? 'h-auto' : 'h-20'}`}>
       <div>
         <img
           src='/img/newsciastra.jpg'
@@ -21,28 +20,21 @@ const Header = () => {
         />
       </div>
 
-      <div className={`lg:flex ${active ? 'block' : 'hidden'}`}>
-        <ul className='flex flex-col md:flex-row gap-4 md:gap-8 text-xl'>
+      {/* Navigation for medium and larger screens */}
+      <div className={`lg:flex gap-4 items-center ${active ? 'block' : 'hidden'}`}>
+        <ul className='flex flex-col md:flex-row gap-4 md:gap-8 md:text-xl text-md p-1'>
           <li>Home</li>
           <li>Course</li>
           <li>Selection</li>
-          <li>Blogs</li>
+          <li className=''>Blogs</li>
           <li>Material</li>
-          <li className='bg-gradient-to-r from-[#9a9ae9] to-[#9229ba] text-transparent text-2xl bg-clip-text'>
+          <li className='bg-gradient-to-r from-[#9a9ae9] to-[#9229ba] text-transparent text-2xl bg-clip-text underline-offset-auto'>
             Team
           </li>
           <li>Contact Us</li>
         </ul>
-      </div>
-
-      <div>
-        <button className='bg-gradient-to-tr text-2xl px-3 py-1 rounded-xl from-[#5907fe] to-[#e2a7cd] text-white'>
-          Login
-        </button>
-      </div>
-
-      {/* Toggle button for smaller screens */}
-      <div className='md:hidden'>
+       
+      </div><div className='lg:hidden'>
         <button onClick={toggleMenu}>
           <svg
             className={`w-8 h-8 ${active ? 'text-gray-500' : 'text-gray-900'}`}
@@ -69,6 +61,11 @@ const Header = () => {
           </svg>
         </button>
       </div>
+ <button className='bg-gradient-to-tr md:text-2xl text-lg px-3 py-1 rounded-xl from-[#5907fe] to-[#e2a7cd] text-white'>
+          Login
+        </button>
+      {/* Toggle button for smaller screens */}
+      
     </div>
   );
 };
