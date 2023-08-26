@@ -83,7 +83,7 @@ const page = () => {
     const advisorToDisplay = loadAdvisor ? advisorData : advisorData.slice(0, 3)
     return (
         <div className='text-center align-center '>
-        <h1 className='text-center text-3xl font-bold py-3'>Mentor & Advisor</h1>
+        <h1 className='text-center text-3xl font-bold py-3  bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Mentor & Advisor</h1>
         <div className='grid lg:grid-cols-3  grid-cols-1 pt-8 gap-8 justify-center'>
           {advisorToDisplay.map((advisor) => (
             <div key={advisor.name} className='bg-white rounded-lg shadow-md flex flex-col p-4 '>
@@ -99,7 +99,7 @@ const page = () => {
         </div>
         <button
           onClick={() => setLoadAdvisor(!loadAdvisor)}
-          className='bg-blue-400 rounded-xl my-6 hover:bg-blue-800 text-white px-3 py-1'
+          className='bg-gradient-to-tr text-2xl px-3 py-1 my-4 rounded-xl from-[#5907fe] to-[#e2a7cd] text-white'
         >
           {loadAdvisor ? 'Show Less' : 'Show All'}
         </button>

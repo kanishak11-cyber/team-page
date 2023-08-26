@@ -6,11 +6,15 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Team Page',
   description: 'SciAstra Team Page',
+  
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Sci Astra</title>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

@@ -45,7 +45,7 @@ const page = () => {
 
   return (
     <div className='text-center gap-2'>
-    <h1 className='text-center text-3xl font-bold'>Meet Your Mentors</h1>
+    <h1 className='text-center text-3xl font-bold  bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Meet Your Mentors</h1>
     <div className={`grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 pt-8 gap-8 transition-all ease-in-out duration-500 `}>
       {mentorsToDisplay.map((mentor) => (
         <div className='flex flex-col items-center justify-center' key={mentor.name}>
@@ -58,7 +58,7 @@ const page = () => {
     {/* Button to toggle displaying all mentors */}
     <button
       onClick={() => setLoadAllMentors(!loadAllMentors)}
-      className='bg-blue-400 rounded-xl my-6 hover:bg-blue-800 text-white px-3 py-1'
+      className='bg-gradient-to-tr text-2xl px-3 py-1 my-4 rounded-xl from-[#5907fe] to-[#e2a7cd] text-white'
     >
       {loadAllMentors ? 'Show less' : 'Show All'}
     </button>

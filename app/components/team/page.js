@@ -87,10 +87,10 @@ const page = () => {
   const collegesToDisplay = loadAllColleges ? collegeData : collegeData.slice(0, 4);
 
   return (
-    <div className='text-center justify-center flex flex-col py-10 gap-5'>
-      <h1 className='text-center text-3xl font-bold'>Team Page</h1>
+    <div className='text-center justify-center flex flex-col py-10 gap-5 '>
+      <h1 className='text-center text-5xl py-2 font-bold mt-20 bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Our Team </h1>
       <div>
-        <p className='text-xl font-semibold py-3'>Learn from scientists, research scholars from the top institutes in the world.</p>
+        <p className='text-xl font-semibold py-3 text-[#3942b0]'>Learn from scientists, research scholars from the top institutes in the world.</p>
         <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 pt-8 gap-8'>
           {collegesToDisplay.map((college) => (
             <div className={`flex flex-col justify-center items-center gap-5 padding-2`} key={college.name}>
@@ -103,7 +103,7 @@ const page = () => {
         {/* Button to toggle displaying all colleges */}
         <button 
           onClick={() => setLoadAllColleges(!loadAllColleges)} 
-          className='bg-blue-400 rounded-xl my-6 hover:bg-blue-800 text-white px-3 py-1'
+          className='bg-gradient-to-tr text-2xl px-3 py-1 my-4 rounded-xl from-[#5907fe] to-[#e2a7cd] text-white'
         >
           {loadAllColleges ? 'show less' : 'Show All '}
         </button>
