@@ -123,7 +123,7 @@ const page = () => {
     <h1 className='text-center text-5xl font-bold  bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Meet Your Mentors</h1>
     <div className={`grid lg:grid-cols-5  md:grid-cols-3 grid-cols-1 pt-8 gap-8 transition-all ease-in-out duration-500 `}>
       {mentorsToDisplay.map((mentor) => (
-        <div className='flex flex-col items-center bg-slate-100 hover:bg-slate-200 hover:cursor-pointer border-2 border-slate-50 rounded-2xl p-2 shadow-xl shadow-[#404040]
+        <div className='flex flex-col items-center hover:ease-in-out-300 hover:scale-110 hover:transition-all bg-slate-100 hover:bg-slate-200 hover:cursor-pointer border-2 border-slate-50 rounded-2xl p-2 shadow-xl shadow-[#404040]
          justify-center' key={mentor.name}>
           <img src={mentor.img} alt={mentor.name} className='rounded-full h-40 w-40 object-cover ' width={80}/>
           <h1 className='text-xl font-bold'>{mentor.name}</h1>
