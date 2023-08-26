@@ -120,7 +120,7 @@ const page = () => {
 
   return (
     <div className='text-center gap-2'>
-    <h1 className='text-center text-5xl font-bold  bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Meet Your Mentors</h1>
+    <h1 className='text-center md:text-5xl text-2xl font-bold  bg-gradient-to-t from-[#234eb0] to-[#ad56df] text-transparent  bg-clip-text'>Meet Your Mentors</h1>
     <div className={`grid lg:grid-cols-5  md:grid-cols-3 grid-cols-1 pt-8 gap-8 transition-all ease-in-out duration-500 `}>
       {mentorsToDisplay.map((mentor) => (
         <div className='flex flex-col items-center hover:ease-in-out-300 hover:scale-110 hover:transition-all bg-slate-100 hover:bg-slate-200 hover:cursor-pointer border-2 border-slate-50 rounded-2xl p-2 shadow-xl shadow-[#404040]
